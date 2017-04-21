@@ -1,1 +1,43 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+	<title>Formulario de Validación</title>
+</head>
+<body>
+	<h3 align="center">Formulario de Datos</h3>
+	<from action="">
+		<p align="center">
+		<label for="name">Nombre</label><br>
+		<input type="text" name="name" required><br>
+		</p>
+		<p align="center">
+		<label for="lastname">Apellido</label><br>
+		<input type="text" name="lastname" required><br>
+		</p>
+		<p align="center">
+		<label for="telefono">Teléfono</label><br>
+		<input type="text" name="telefono" required><br>
+		</p>
+		<p align="center">
+		<label for="email">Email</label><br>
+		<input type="email" name="email" required><br>
+		</p>
+		<p align="center">
+		<label for="pw">Crea tu contraseña</label><br>
+		<input type="password" name="pw" pattern=".{6,}" title="6 o más caracteres" required> 
+		</p>
+		<p align="center">
+		<input type="submit" name="" value="send">
+		</p>
+		<div class="dropdown">
+		  <button class="dropbtn">Dropdown</button>
+		  <div class="dropdown-content">
+		    <a href="#">Link 1</a>
+		    <a href="#">Link 2</a>
+		    <a href="#">Link 3</a>
+  		</div>
+</div>
+	</from>
+</body>
+</html>
