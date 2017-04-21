@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Formulario de Validación</title>
 </head>
 <body>
-	<h3 align="center">Formulario de Datos</h3>
-	<from action="">
+	<h2 align="center">Formulario de Datos</h2>
+	<form action="post">
 		<p align="center">
 		<label for="name">Nombre</label><br>
-		<input type="text" name="name" required><br>
+		<input type="text" name="name"  required><br>
 		</p>
 		<p align="center">
 		<label for="lastname">Apellido</label><br>
@@ -17,27 +18,34 @@
 		</p>
 		<p align="center">
 		<label for="telefono">Teléfono</label><br>
-		<input type="text" name="telefono" required><br>
+		<input type="number" name="telefono" pattern="^[+569]\d{8}$" title="Debe empezar con +569" required><br>
 		</p>
 		<p align="center">
+		<label for="dropdown" required>Escoge tu auto para continuar</label><br>
+		<select name="dropdown" required> 
+		  <option value="">Selecciona uno</option> 
+		  <option value="value1">Kia</option> 
+		  <option value="value2">Ford</option>
+		  <option value="value3">Mazda</option>
+		  <option value="value3">Hyundai</option>
+		  <option value="value3">Mercedes</option>
+		  <option value="value3">Samsung</option>
+		</select>
+		</p>
+		<br>
+		<p align="center">
 		<label for="email">Email</label><br>
-		<input type="email" name="email" required><br>
+		<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
 		</p>
 		<p align="center">
 		<label for="pw">Crea tu contraseña</label><br>
 		<input type="password" name="pw" pattern=".{6,}" title="6 o más caracteres" required> 
 		</p>
 		<p align="center">
-		<input type="submit" name="" value="send">
+		<button>SEND</button>
+
 		</p>
-		<div class="dropdown">
-		  <button class="dropbtn">Dropdown</button>
-		  <div class="dropdown-content">
-		    <a href="#">Link 1</a>
-		    <a href="#">Link 2</a>
-		    <a href="#">Link 3</a>
-  		</div>
-</div>
-	</from>
+		
+	</form>
 </body>
 </html>
